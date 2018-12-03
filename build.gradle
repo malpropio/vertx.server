@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ayida.vertx'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Core dependencies
+    compile 'io.vertx:vertx-core:3.5.4'
+    compile group: 'io.aeron', name: 'aeron-client', version: '1.12.0'
+    compile group: 'io.aeron', name: 'aeron-driver', version: '1.12.0'
+
+    // Logging dependency
+    //compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.1'
+
+    // Test dependency
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

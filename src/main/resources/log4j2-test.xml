@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="File" bufferedIO="true" fileName="logs/log4j2-file-sync-${date:HH:mm:ss.SSS}.log">
+            <PatternLayout pattern="[%d] {%p} (%m)%n" />
+        </File>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS}:[%t] [%p] [%logger] %m%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="all" includeLocation="false">
+            <AppenderRef ref="File" />
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+
+</Configuration>
